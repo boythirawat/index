@@ -37,9 +37,11 @@
 </div>
 
 <script>
-	const myText = new AutoTyping({
-		id: 'typing', //Your HTML element id without # (string) - required
+	if (routing.x == 0) {
+		const myText = new AutoTyping({
+			id: 'typing', //Your HTML element id without # (string) - required
 
-		typeText: ["Hi,i'am Thirawat"], //Your text (array with strings) - required
-	}).init();
+			typeText: ["Hi,i'am Thirawat"], //Your text (array with strings) - required
+		}).init();
+	}
 </script>

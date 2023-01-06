@@ -1,20 +1,43 @@
-// Xampp
-let subFolder = 'index'
-let page = window.location.pathname.split(subFolder)[1].slice(1)
+class Route {
+	x = 0
+	routes = [
+		{ page: 'home', path: './pages/home.html' },
+		{ page: 'login', path: './pages/login.html' },
+		{ page: 'admin', path: './pages/admin.html' },
+	];
 
-// Server
-// let page = window.location.pathname.slice(1)
+	constructor() {
+		this.update();
 
-let routes = [
-	{page: 'home', path: './pages/home.html'},
-	{page: 'login', path: './pages/login.html'},
-	{page: 'admin', path: './pages/admin.html'},
-]
+		$('a.link').on('click', (el) => {
+			this.page = el.target.getAttribute('data-page');
+			this.update();
+		});
+	}
 
-Routing(page, routes)
+	update() {
+		let route = this.routes.find((x) => x.page == this.page);
+		if (!route) route = this.routes.find((x) => x.page == 'home');
+		history.pushState(null, null, route.page);
+		rendePage($('#content'), route.path);
+	}
+
+	getPage() {
+		// Xampp
+		let subFolder = 'index';
+		let page = window.location.pathname.split(subFolder)[1].slice(1);
+
+		// Server
+		// let page = window.location.pathname.slice(1)
+
+		return page;
+	}
+}
+
+let routing = new Route();
 
 function rendePage(element, path) {
-	var xhttp;
+	let xhttp;
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function () {
 		if (this.readyState == 4) {
@@ -25,10 +48,4 @@ function rendePage(element, path) {
 	xhttp.open('GET', path, true);
 	xhttp.send();
 	return;
-}
-
-function Routing(page, routes) {
-  let route = routes.find(x => x.page == page)
-  if (!route) window.location.replace('home');
-  rendePage($('#content'), route.path)
 }
