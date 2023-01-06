@@ -17,6 +17,7 @@ class Route {
 	}
 
 	update() {
+		if (this.page == '' || this.page == null) this.page = this.getPage()
 		let route = this.routes.find((x) => x.page == this.page);
 		if (!route) route = this.routes.find((x) => x.page == 'home');
 		history.pushState(null, null, route.page);
