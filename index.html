@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;800&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+    <!-- just AutoTyping.js or .min.js -->
+    <script src="autotype.js"></script>
+  </head>
+  <body style="background-color:rgb(11, 11, 63);">
+    
+    
+    <ul class="nav">
+      <li class="itema title a">BOY THIRAWAT</li>
+      <button><li class="itema b">home</li></button>
+      <button><li class="itema b">about</li></button>
+      <button><li class="itema b">contact</li></button>
+    </ul> 
+
+    <div class="mp" value="Play loop!">My portfilo</div>
+
+    <center><p style="color: aliceblue;" class="line-1 anim-typewriter">Hi,i'am Thirawat</p></center>
+
+    <div class="row text-left">
+      <div class="col-6 space d-none d-md-block" align="center">
+        <img class="img" src="img/pro.jpg" />
+      </div>
+      <div id="about" class="col-6 space d-none d-md-block fontt" style="margin-top: 4%;">
+        <p style="font-size: 32pt">Thirawat Thirachawalit</p>
+        <p style="font-size: 16pt">สวัสดีนี่คือเว็บไซต์แรกของฉัน</p>
+        <p style="font-size: 16pt">ฉันจะพยายามทำมันให้ดีที่สุด</p>
+      </div>
+    </div>
+
+    <div class="ac">
+      <center>My Activity</center>
+    </div>
+
+    <div class="flex-container">
+      <div class="music-card ">
+        <div class="image">
+          <img src="img/imake.jpg" alt="i make" />
+        </div>
+
+        <div class="info">
+          <h2 class="title">IMAKE</h2>
+          <author class="artist">MBK</author>
+        </div>
+      </div>
+    </div>
+    
+
+    <div id="example"></div>
+
+    <script>
+      const myText = new AutoTyping({
+        id: "example", //Your HTML element id without # (string) - required
+
+        typeText: ["words", "sentences"], //Your text (array with strings) - required
+      }).init();
+    </script>
+
+    <script
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
