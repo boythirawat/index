@@ -8,6 +8,7 @@ let page = window.location.pathname.split(subFolder)[1].slice(1)
 let routes = [
 	{page: 'home', path: './pages/home.html'},
 	{page: 'login', path: './pages/login.html'},
+	{page: 'admin', path: './pages/admin.html'},
 ]
 
 Routing(page, routes)
