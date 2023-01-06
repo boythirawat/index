@@ -9,8 +9,9 @@ class Route {
 	constructor() {
 		this.update();
 
-		$('a.link').on('click', (el) => {
-			this.page = el.target.getAttribute('data-page');
+		$('[routerLink]').on('click', (el) => {
+			el.preventDefault();
+			this.page = el.target.getAttribute('routerLink');
 			this.update();
 		});
 	}
