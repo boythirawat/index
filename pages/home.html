@@ -1,0 +1,45 @@
+<div id="section1">
+	<div class="logofont">My portfilo</div>
+	<div style="color: aliceblue" id="typing" class="line-1"></div>
+</div>
+
+<div class="row text-left" style="width: 100%">
+	<div class="col-6 space d-none d-md-block" align="center">
+		<img class="img" src="img/pro.jpg" />
+	</div>
+	<div
+		id="about"
+		class="col-6 space d-none d-md-block fontt"
+		style="margin-top: 4%"
+	>
+		<p style="font-size: 32pt">Thirawat Thirachawalit</p>
+		<p style="font-size: 16pt">สวัสดีนี่คือเว็บไซต์แรกของฉัน</p>
+		<p style="font-size: 16pt">ฉันจะพยายามทำมันให้ดีที่สุด</p>
+	</div>
+</div>
+
+<div class="container">
+	<div class="title">My Activity</div>
+	<div class="row warp justify-content-center">
+		<!-- cards -->
+		<div class="col-sm-12 col-md-4">
+			<div class="music-card">
+				<div class="image">
+					<img src="img/imake.jpg" alt="i make" />
+				</div>
+				<div class="info">
+					<h2 class="title">IMAKE</h2>
+					<author class="artist">MBK</author>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	const myText = new AutoTyping({
+		id: 'typing', //Your HTML element id without # (string) - required
+
+		typeText: ["Hi,i'am Thirawat"], //Your text (array with strings) - required
+	}).init();
+</script>
