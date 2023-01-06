@@ -373,3 +373,15 @@ to{border-right-color: transparent;}
 .no-pointerevents .form-3 p:nth-child(1):before {
   display: none;
 }
+
+
+
+.form_class {
+  width: 400px;
+  padding: 400px;
+  border-radius: 8px;
+  background-color: white;
+  font-family: 'system-ui';
+  box-shadow: 5px 5px 10px rgb(0,0,0,0.3);
+  align-items: center;
+}
