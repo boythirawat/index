@@ -4,6 +4,7 @@ class Route {
 		{ page: 'home', path: './pages/home.html' },
 		{ page: 'login', path: './pages/login.html' },
 		{ page: 'admin', path: './pages/admin.html' },
+		
 	];
 
 	constructor() {
